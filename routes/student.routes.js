@@ -48,7 +48,7 @@ studentExpressRoute.route('/:id').delete((req, res) => {
         }
     })
 })
-
+ 
 studentExpressRoute.route('/:id').put((req, res) => {
     StudentSchema.findByIdAndUpdate(req.params.id, {$set: req.body}, (error, data) => {
             if(error){
