@@ -24,7 +24,7 @@ studentExpressRoute.route('/:id').get((req, res) => {
 })
 
 studentExpressRoute.route('/').post((req, res, next) => {
-    //console.log(req.route);
+    console.log("Route: " +  req.baseUrl);
     StudentSchema.create(req.body, (error, data) => {
         if(error){
             return next(error);
